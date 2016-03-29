@@ -31,7 +31,7 @@ var createAMI = function(instanceId, cb) {
   var datestr = dateFormat(new Date(), "yyyymmddHHMM")
   var params = {
     InstanceId: instanceId,
-    Name: instanceId+datestr,
+    Name: instanceId+'-'+datestr,
     NoReboot: true
   }
   ec2.createImage(params, function(err, data) {
